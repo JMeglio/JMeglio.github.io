@@ -118,23 +118,6 @@
     .project-links a:hover {
       text-decoration: underline;
     }
-    .exp-list {
-      list-style: none;
-      padding: 0;
-    }
-    .exp-item {
-      padding: 1em 0;
-      border-bottom: 1px solid #eee;
-    }
-    .exp-title {
-      font-weight: bold;
-      color: #1976d2;
-      font-size: 1.1em;
-    }
-    .exp-period {
-      color: #ff9800;
-      font-size: 0.97em;
-    }
     @media (max-width: 700px) {
       main {
         margin: 0.5rem;
@@ -146,6 +129,88 @@
       .project-card {
         max-width: 100%;
       }
+      .experience-list {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .experience-card {
+        max-width: 100%;
+      }
+    }
+    /* Container for all experiences */
+    .experience-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: flex-start;
+    }
+    
+    /* Card for each experience */
+    .experience-card {
+      background: #222;
+      color: #fff;
+      border-radius: 7px;
+      box-shadow: 0 2px 8px #0003;
+      flex: 1 1 320px;
+      max-width: 380px;
+      min-width: 260px;
+      padding: 1.2rem;
+      border-top: 5px solid #ff9800;
+      border-left: 5px solid #1976d2;
+      position: relative;
+      margin-bottom: 1.5rem;
+      transition: transform 0.12s, box-shadow 0.12s;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .experience-card:hover {
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 6px 20px #0005;
+    }
+    
+    .experience-card img {
+      max-width: 100%;
+      border-radius: 4px;
+      margin-bottom: 0.8em;
+      background: #fff;
+      box-shadow: 0 1px 4px #0002;
+    }
+    
+    /* Title of experience (role or position) */
+    .experience-title {
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #ff9800;
+      margin-bottom: 0.3em;
+    }
+    
+    /* Place of experience (organization) */
+    .experience-place {
+      font-size: 1em;
+      color: #1976d2;
+      margin-bottom: 0.1em;
+      font-style: italic;
+    }
+    
+    /* Time (duration) */
+    .experience-time {
+      color: #fff;
+      background: #1976d2;
+      font-size: 0.98em;
+      border-radius: 3px;
+      padding: 2px 8px;
+      display: inline-block;
+      margin-bottom: 0.7em;
+    }
+    
+    /* Description text */
+    .experience-desc {
+      margin-top: 0.5em;
+      font-size: 1em;
+      color: #ddd;
+      word-break: break-word;
     }
   </style>
 </head>
@@ -159,7 +224,39 @@
   <main>
     <section class="about">
       <strong>About Me:</strong> <br>
-      I'm passionate about research, coding, and solving real-world problems with a creative twist. I like mixing tech, science, and a bit of fun in everything I do. I enjoy learning, sharing, and collaborating — let’s build something cool together!
+      I'm passionate about research and coding in the field of AI applied to Computer Vision. I like to stay update with the new research techniques and apply them to real world problems. I enjoy learning, exploring, sharing, and collaborating. Feel free to ask for collaboration!
+    </section>
+    <section>
+      <h2>Working Experiences</h2>
+      <div class="experience-list">
+        <div class="experience-card">
+          <img src="https://via.placeholder.com/350x180?text=Master+Thesis" alt="Master Thesis Screenshot">
+          <div class="experience-title">Master Thesis: Artificial Intelligence</div>
+          <div class="experience-place">
+            ALMA MATER STUDIORUM - University of Bologna
+          </div>
+          <div class="experience-time">
+            2021 - 2024
+          </div>
+          <div class="experience-desc">
+            <!-- Replace with your thesis description -->
+            Completed a Master’s degree with a strong foundation in Mathematics and Machine Learning. Developed practical skills through industry-focused projects and coursework on emerging technologies and ethical engineering.          </div>
+        </div>
+        <div class="experience-card">
+          <img src="https://via.placeholder.com/350x180?text=Master+Thesis" alt="VARLab Screenshot">
+          <div class="experience-title">Reasearch Scolarship at VARLab</div>
+          <div class="experience-place">
+            VARLab, ALMA MATER STUDIORUM - University of Bologna
+          </div>
+          <div class="experience-time">
+            2024 - Ongoing
+          </div>
+          <div class="experience-desc">
+            <!-- Replace with your thesis description -->
+            Conducting research in 3D object reconstruction using Gaussian Splatting, collaborating with fashion companies and museums. Applying AI techniques to enhance industrial workflows, with a focus on generative and predictive AI.          </div>
+        </div>
+          <!-- Optionally add links or DOI if available -->
+        </div>
     </section>
     <section>
       <h2>Research Projects</h2>
@@ -199,17 +296,6 @@
         </div>
         <!-- Add more projects here -->
       </div>
-    </section>
-    <section>
-      <h2>Working Experience</h2>
-      <ul class="exp-list">
-        <li class="exp-item">
-          <span class="exp-title">[Job Title or Internship]</span> <br>
-          <span class="exp-period">[Company/Organization], [Start Date] – [End Date]</span> <br>
-          [Describe your role, responsibilities, and achievements.]
-        </li>
-        <!-- Add more experiences here -->
-      </ul>
     </section>
   </main>
 </body>
